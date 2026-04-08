@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistemas Defensoriais</title>
+  <title>Sistemas Defensoriais - APIDEP</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    /* Reset básico */
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: 'Inter', sans-serif; 
+    }
 
     body {
       height: 100vh;
@@ -15,35 +21,36 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      padding: 20px;
     }
 
-    /* O Card Branco Central */
     .container {
-      position: relative;
       background: white;
-      padding: 40px 30px;
+      padding: 30px 25px;
       border-radius: 24px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.1);
       text-align: center;
-      width: 90%;
-      max-width: 480px;
-      z-index: 1;
+      width: 100%;
+      max-width: 420px;
     }
 
     .logo {
-      width: 100%;
-      max-width: 280px;
+      width: 110%; /* Aumenta um pouco para compensar o vazio */
+      max-width: 350px;
       height: auto;
-      margin: 0 auto 20px auto;
+      /* O PULO DO GATO: Margens negativas anulam o espaço vazio da imagem */
+      margin: -20px auto -45px auto; 
       display: block;
+      object-fit: contain;
     }
 
     h1 {
-      color: #374151; /* Cor mais suave conforme a foto */
+      color: #065f46;
       margin-bottom: 25px;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 22px;
+      position: relative;
+      z-index: 2; /* Garante que o texto fique acima de qualquer transparência */
     }
 
     /* Estilo dos Botões */
@@ -60,15 +67,15 @@
       font-size: 16px;
     }
 
-    /* Botão Branco (Calculadora) */
+    /* Botão Branco */
     .btn-white {
       background: #ffffff;
       color: #374151;
       border: 1px solid #e5e7eb;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    /* Botão Verde (Jornadas) */
+    /* Botão Verde */
     .btn-green {
       background: linear-gradient(90deg, #065f46, #10b981);
       color: white;
@@ -76,36 +83,45 @@
 
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .arrow {
+      font-size: 18px;
+      opacity: 0.7;
     }
 
     .footer {
-      margin-top: 30px;
+      margin-top: 25px;
       font-size: 12px;
       color: #6b7280;
+      line-height: 1.4;
+      padding: 0 10px;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <img src="logo-apidep.jpg" class="logo" alt="Logo APIDEP">
+    
+    <img src="logo-apidep.png" class="logo" alt="Logo APIDEP">
 
     <h1>Sistemas Defensoriais</h1>
 
     <a href="https://calculadora-alimentar-dpe.vercel.app/" class="btn btn-white">
       <span>⚖️ Calculadora de Pensão Alimentícia</span>
-      <span>›</span>
+      <span class="arrow">›</span>
     </a>
 
     <a href="https://gerador-oficios-dp.vercel.app/" class="btn btn-green">
       <span>📄 Jornadas Itinerantes e Ofícios</span>
-      <span>›</span>
+      <span class="arrow">›</span>
     </a>
 
     <div class="footer">
       Associação Piauiense das Defensoras e Defensores Públicos
     </div>
+
   </div>
 
 </body>
