@@ -1,72 +1,141 @@
-<style>
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #d1fae5, #86efac);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Página</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .container {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(14px);
-    padding: 35px 40px; /* 🔥 MENOR */
-    border-radius: 24px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #d1fae5, #86efac);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-  /* 🔥 LOGO MENOR E SEM ESPAÇO EXAGERADO */
-  .logo {
-    max-width: 300px;
-    width: 100%;
-    margin: 0 auto 10px auto; /* 🔥 REDUZ ESPAÇO */
-    display: block;
-  }
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(14px);
+      padding: 35px 40px;
+      border-radius: 24px;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    }
 
-  h1 {
-    color: #065f46;
-    margin: 10px 0 20px 0; /* 🔥 SUBIU TUDO */
-    font-size: 20px;
-    font-weight: 500;
-  }
+    .logo {
+      max-width: 200px;
+      width: 100%;
+      margin: 0 auto 15px auto;
+      display: block;
+    }
 
-  .card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 20px;
-    margin: 10px 0;
-    border-radius: 14px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: all 0.25s ease;
-  }
+    /* Se não tiver logo, use isso: */
+    .logo-placeholder {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #065f46, #10b981);
+      border-radius: 16px;
+      margin: 0 auto 15px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+    }
 
-  /* 🔥 AGORA OS DOIS COM FUNDO BONITO */
-  .card.light {
-    background: #d1fae5; /* verde claro suave */
-    color: #065f46;
-  }
+    h1 {
+      color: #065f46;
+      margin: 10px 0 25px 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
 
-  .card.dark {
-    background: linear-gradient(90deg, #065f46, #10b981);
-    color: white;
-  }
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      margin: 12px 0;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.25s ease;
+    }
 
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  }
+    .card.light {
+      background: #d1fae5;
+      color: #065f46;
+      border: 2px solid #a7f3d0;
+    }
 
-  .footer {
-    margin-top: 20px;
-    font-size: 11px;
-    color: #6b7280;
-  }
-</style>
+    .card.dark {
+      background: linear-gradient(90deg, #065f46, #10b981);
+      color: white;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-icon {
+      font-size: 20px;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 25px 20px;
+      }
+      
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo (substitua pela sua imagem ou use o placeholder) -->
+    <div class="logo-placeholder"></div>
+    <!-- OU -->
+    <!-- <img src="sua-logo.png" alt="Logo" class="logo"> -->
+
+    <h1>Bem-vindo ao Nosso Sistema</h1>
+
+    <a href="#opcao1" class="card light">
+      <span>📊 Acessar Painel</span>
+      <span class="card-icon">→</span>
+    </a>
+
+    <a href="#opcao2" class="card dark">
+      <span>⚙️ Configurações</span>
+      <span class="card-icon">→</span>
+    </a>
+
+    <div class="footer">
+      © 2024 - Todos os direitos reservados
+    </div>
+  </div>
+</body>
+</html>
+
