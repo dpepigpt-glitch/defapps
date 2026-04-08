@@ -2,46 +2,99 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meus Aplicativos</title>
+  <title>Sistemas Defensoriais</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
+      height: 100vh;
+      background: linear-gradient(135deg, #d1fae5, #ecfdf5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       text-align: center;
-      padding-top: 100px;
+      width: 400px;
     }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
     h1 {
-      margin-bottom: 50px;
+      color: #065f46;
+      margin-bottom: 40px;
+      font-weight: 600;
     }
+
     .btn {
-      display: block;
-      width: 300px;
-      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
       padding: 15px;
-      background: #2563eb;
+      background: #10b981;
       color: white;
       text-decoration: none;
-      border-radius: 10px;
-      font-size: 18px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 500;
       transition: 0.3s;
     }
+
     .btn:hover {
-      background: #1d4ed8;
+      background: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
   </style>
 </head>
+
 <body>
 
-  <h1>Meus Sistemas</h1>
+  <div class="container">
 
-  <a class="btn" href="https://seu-app-java.vercel.app">
-    🔵 Sistema Java
-  </a>
+    <!-- COLOQUE SUA LOGO AQUI -->
+    <img src="logo.png" class="logo" alt="Logo">
 
-  <a class="btn" href="https://seu-app-html.vercel.app">
-    🟢 Sistema HTML
-  </a>
+    <h1>Sistemas Defensoriais</h1>
+
+    <a class="btn" href="https://calculadora-alimentar-dpe.vercel.app/">
+      📊 Calculadora de Pensão Alimentícia
+    </a>
+
+    <a class="btn" href="https://gerador-oficios-dp.vercel.app/">
+      📄 Jornadas Itinerantes e Ofícios
+    </a>
+
+    <div class="footer">
+      Defensoria Pública
+    </div>
+
+  </div>
 
 </body>
 </html>
