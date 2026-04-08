@@ -1,72 +1,112 @@
-<style>
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #d1fae5, #86efac);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistemas Defensoriais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  .container {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(14px);
-    padding: 35px 40px; 
-    border-radius: 24px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-  }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
 
-  
-  .logo {
-    max-width: 300px;
-    width: 100%;
-    margin: 0 auto 10px auto; 
-    display: block;
-  }
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #d1fae5, #bbf7d0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
 
-  h1 {
-    color: #065f46;
-    margin: 10px 0 20px 0; 
-    font-size: 20px;
-    font-weight: 500;
-  }
+    /* O Card Branco Central */
+    .container {
+      position: relative;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 480px;
+      z-index: 1;
+    }
 
-  .card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 20px;
-    margin: 10px 0;
-    border-radius: 14px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: all 0.25s ease;
-  }
+    .logo {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      margin: 0 auto 20px auto;
+      display: block;
+    }
 
- 
-  .card.light {
-    background: #ecfdf5; /* verde claro suave */
-    color: #065f46;
-  }
+    h1 {
+      color: #374151; /* Cor mais suave conforme a foto */
+      margin-bottom: 25px;
+      font-weight: 600;
+      font-size: 24px;
+    }
 
-  .card.dark {
-    background: linear-gradient(90deg, #065f46, #10b981);
-    color: white;
-  }
+    /* Estilo dos Botões */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      margin: 12px 0;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
 
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  }
+    /* Botão Branco (Calculadora) */
+    .btn-white {
+      background: #ffffff;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
 
-  .footer {
-    margin-top: 20px;
-    font-size: 11px;
-    color: #6b7280;
-  }
-</style>
+    /* Botão Verde (Jornadas) */
+    .btn-green {
+      background: linear-gradient(90deg, #065f46, #10b981);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo-apidep.jpg" class="logo" alt="Logo APIDEP">
+
+    <h1>Sistemas Defensoriais</h1>
+
+    <a href="https://calculadora-alimentar-dpe.vercel.app/" class="btn btn-white">
+      <span>⚖️ Calculadora de Pensão Alimentícia</span>
+      <span>›</span>
+    </a>
+
+    <a href="https://gerador-oficios-dp.vercel.app/" class="btn btn-green">
+      <span>📄 Jornadas Itinerantes e Ofícios</span>
+      <span>›</span>
+    </a>
+
+    <div class="footer">
+      Associação Piauiense das Defensoras e Defensores Públicos
+    </div>
+  </div>
+
+</body>
+</html>
