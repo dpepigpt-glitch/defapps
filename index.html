@@ -1,114 +1,72 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Sistemas Institucionais</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #d1fae5, #86efac);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  .container {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(14px);
+    padding: 35px 40px; /* 🔥 MENOR */
+    border-radius: 24px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #d1fae5, #86efac);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
+  /* 🔥 LOGO MENOR E SEM ESPAÇO EXAGERADO */
+  .logo {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto 10px auto; /* 🔥 REDUZ ESPAÇO */
+    display: block;
+  }
 
-    .container {
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(14px);
-      padding: 50px;
-      border-radius: 24px;
-      width: 90%;
-      max-width: 680px;
-      text-align: center;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-      animation: fade 0.8s ease;
-    }
+  h1 {
+    color: #065f46;
+    margin: 10px 0 20px 0; /* 🔥 SUBIU TUDO */
+    font-size: 20px;
+    font-weight: 500;
+  }
 
-    @keyframes fade {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    margin: 10px 0;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+  }
 
-    /* LOGO AJUSTADA (SEM CORTE, ELEGANTE) */
-    .logo {
-      max-width: 420px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 30px auto;
-    }
+  /* 🔥 AGORA OS DOIS COM FUNDO BONITO */
+  .card.light {
+    background: #d1fae5; /* verde claro suave */
+    color: #065f46;
+  }
 
-    h1 {
-      color: #065f46;
-      margin-bottom: 30px;
-      font-size: 22px;
-      font-weight: 500;
-    }
+  .card.dark {
+    background: linear-gradient(90deg, #065f46, #10b981);
+    color: white;
+  }
 
-    .card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 22px;
-      margin: 14px 0;
-      border-radius: 16px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
 
-    .card.light {
-      background: #ecfdf5;
-      color: #065f46;
-    }
-
-    .card.dark {
-      background: linear-gradient(90deg, #065f46, #10b981);
-      color: white;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-    }
-
-    .footer {
-      margin-top: 30px;
-      font-size: 12px;
-      color: #6b7280;
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <!-- LOGO (PNG TRANSPARENTE) -->
-    <img src="logo-apidep.png" class="logo" alt="APIDEP">
-
-    <h1>Sistemas Institucionais</h1>
-
-    <a class="card light" href="https://calculadora-alimentar-dpe.vercel.app/">
-      ⚖️ Calculadora de Pensão Alimentícia →
-    </a>
-
-    <a class="card dark" href="https://gerador-oficios-dp.vercel.app/">
-      📄 Jornadas Itinerantes e Ofícios →
-    </a>
-
-    <div class="footer">
-      Associação Piauiense das Defensoras e Defensores Públicos
-    </div>
-
-  </div>
-
-</body>
-</html>
+  .footer {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #6b7280;
+  }
+</style>
