@@ -1,3 +1,24 @@
+Perfeito — sua logo é **horizontal e longa**, então precisamos tratar ela diferente pra não cortar nem deformar 👍
+
+O problema que aconteceu foi:
+👉 o container pequeno + limite de altura = cortou lateralmente
+
+---
+
+## 💚 SOLUÇÃO IDEAL PRA SUA LOGO (horizontal)
+
+Vamos:
+
+* aumentar espaço
+* deixar ela responsiva
+* evitar corte
+* centralizar bonito
+
+---
+
+## 🔥 CÓDIGO FINAL AJUSTADO PRA SUA LOGO
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,7 +44,6 @@
       overflow: hidden;
     }
 
-    /* PADRÃO INSTITUCIONAL (efeito leve no fundo) */
     body::before {
       content: "";
       position: absolute;
@@ -37,7 +57,7 @@
 
     @keyframes movimento {
       0% { transform: translate(0,0); }
-      50% { transform: translate(-50px,-50px); }
+      50% { transform: translate(-40px,-40px); }
       100% { transform: translate(0,0); }
     }
 
@@ -45,13 +65,12 @@
       position: relative;
       z-index: 1;
       background: white;
-      padding: 50px 40px;
+      padding: 40px 30px;
       border-radius: 20px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.15);
       text-align: center;
-      width: 400px;
+      width: 480px;
 
-      /* ANIMAÇÃO AO ENTRAR */
       opacity: 0;
       transform: translateY(30px);
       animation: entrar 0.8s ease forwards;
@@ -64,15 +83,21 @@
       }
     }
 
+    /* AJUSTE PERFEITO PRA SUA LOGO */
     .logo {
-      width: 120px;
-      margin-bottom: 20px;
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto 25px auto;
+      display: block;
     }
 
     h1 {
       color: #065f46;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       font-weight: 600;
+      font-size: 22px;
     }
 
     .btn {
@@ -80,13 +105,13 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      margin: 15px 0;
-      padding: 15px;
+      margin: 12px 0;
+      padding: 14px;
       background: #10b981;
       color: white;
       text-decoration: none;
       border-radius: 12px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
       transition: 0.3s;
     }
@@ -98,7 +123,7 @@
     }
 
     .footer {
-      margin-top: 30px;
+      margin-top: 25px;
       font-size: 12px;
       color: #6b7280;
     }
@@ -110,13 +135,13 @@
 
   <div class="container">
 
-    <!-- logo-apidep.png -->
-    <img src="logo-apidep.png" class="logo" alt="Logo">
+    <!-- SUA LOGO (essa que você mandou) -->
+    <img src="logo-apidep.png" class="logo" alt="Logo APIDEP">
 
     <h1>Sistemas Defensoriais</h1>
 
     <a class="btn" href="https://calculadora-alimentar-dpe.vercel.app/">
-      📊 Calculadora de Pensão Alimentícia
+      ⚖️ Calculadora de Pensão Alimentícia
     </a>
 
     <a class="btn" href="https://gerador-oficios-dp.vercel.app/">
@@ -124,10 +149,44 @@
     </a>
 
     <div class="footer">
-      Defensoria Pública
+      Associação Piauiense das Defensoras e Defensores Públicos
     </div>
 
   </div>
 
 </body>
 </html>
+```
+
+---
+
+## 📁 IMPORTANTE
+
+Salva a imagem com esse nome:
+
+```bash
+logo-apidep.png
+```
+
+E coloca na mesma pasta do `index.html`.
+
+---
+
+## 💡 Resultado agora
+
+* Logo **inteira (sem cortar)**
+* Proporção correta
+* Layout mais largo pra acomodar ela
+* Visual institucional forte
+
+---
+
+## 🔥 Se quiser deixar ainda mais profissional
+
+Posso no próximo passo:
+
+* remover esse fundo branco da logo (ficar transparente)
+* centralizar só o símbolo + nome menor
+* transformar ela em versão “header institucional padrão gov”
+
+Só falar 👍
