@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    /* Reset básico */
     * { 
       margin: 0; 
       padding: 0; 
@@ -20,26 +21,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 15px;
+      padding: 20px;
     }
 
     .container {
       background: white;
-      padding: 30px 20px;
+      padding: 30px 25px;
       border-radius: 24px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.1);
       text-align: center;
       width: 100%;
-      max-width: 550px; /* Aumentei um pouco para caber os botões lado a lado */
+      max-width: 420px;
     }
 
     .logo {
-      width: 100%;
-      max-width: 320px;
+      width: 110%; /* Aumenta um pouco para compensar o vazio */
+      max-width: 350px;
       height: auto;
-      /* Centraliza e puxa o conteúdo de baixo para compensar o vazio do PNG */
-      margin: -20px auto -50px auto; 
+      /* O PULO DO GATO: Margens negativas anulam o espaço vazio da imagem */
+      margin: -20px auto -45px auto; 
       display: block;
+      object-fit: contain;
     }
 
     h1 {
@@ -47,57 +49,54 @@
       margin-bottom: 25px;
       font-weight: 600;
       font-size: 22px;
+      position: relative;
+      z-index: 2; /* Garante que o texto fique acima de qualquer transparência */
     }
 
-    /* CONTAINER DOS BOTÕES LADO A LADO */
-    .button-group {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap; /* Garante que em celulares muito pequenos eles empilhem */
-    }
-
+    /* Estilo dos Botões */
     .btn {
-      flex: 1; /* Faz os dois botões terem o mesmo tamanho */
-      min-width: 200px; /* Largura mínima para não ficarem esmagados */
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 18px 15px;
+      justify-content: space-between;
+      padding: 16px 20px;
+      margin: 12px 0;
       border-radius: 14px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       transition: all 0.3s ease;
-      font-size: 14px;
-      line-height: 1.2;
+      font-size: 16px;
     }
 
-    /* Botão Calculadora - Verde Clarinho */
-    .btn-light-green {
-      background: #f0fdf4; /* Verde bem suave */
-      color: #065f46;
-      border: 1px solid #bbf7d0;
+    /* Botão Branco */
+    .btn-white {
+      background: #ffffff;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    /* Botão Jornadas - Verde Escuro Degradê */
-    .btn-dark-green {
+    /* Botão Verde */
+    .btn-green {
       background: linear-gradient(90deg, #065f46, #10b981);
       color: white;
     }
 
     .btn:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
+    .arrow {
+      font-size: 18px;
+      opacity: 0.7;
+    }
+
     .footer {
-      margin-top: 30px;
-      font-size: 11px;
+      margin-top: 25px;
+      font-size: 12px;
       color: #6b7280;
-      max-width: 80%;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.4;
+      padding: 0 10px;
     }
   </style>
 </head>
@@ -109,15 +108,15 @@
 
     <h1>Sistemas Defensoriais</h1>
 
-    <div class="button-group">
-      <a href="https://calculadora-alimentar-dpe.vercel.app/" class="btn btn-light-green">
-        ⚖️ Calculadora de Pensão
-      </a>
+    <a href="https://calculadora-alimentar-dpe.vercel.app/" class="btn btn-white">
+      <span>⚖️ Calculadora de Pensão Alimentícia</span>
+      <span class="arrow">›</span>
+    </a>
 
-      <a href="https://gerador-oficios-dp.vercel.app/" class="btn btn-dark-green">
-        📄 Jornadas e Ofícios
-      </a>
-    </div>
+    <a href="https://gerador-oficios-dp.vercel.app/" class="btn btn-green">
+      <span>📄 Jornadas Itinerantes e Ofícios</span>
+      <span class="arrow">›</span>
+    </a>
 
     <div class="footer">
       Associação Piauiense das Defensoras e Defensores Públicos
